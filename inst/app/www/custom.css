@@ -1,0 +1,531 @@
+:root {
+  --corDestaque: rgb(255, 184, 28);
+  --corDestaqueClara: rgba(255, 184, 28, 0.7);
+  --corDestaque2: #026029;
+  --corPrincipal: rgba(0, 83, 102, 1);
+  --preto: #444;
+  --cinza: rgba(0,0,0,.1);
+  --marginTop: 20px;
+  --tamanhoSidebar: 300px;
+  --marginSidebar: -300px;
+}
+
+/*********************
+  Geral
+*********************/
+
+.alerta-tela {
+  visibility: hidden;
+}
+
+@media only screen and (max-device-width: 550px) and (orientation: portrait) {
+  html {
+    width: 100%;
+    height: 100% !important;
+    overflow: hidden;
+  }
+  .alerta-tela {
+    visibility: visible;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    height: 200vh;
+    background-color: white;
+    z-index: 1000;
+    text-align: center;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 30%;
+  }
+  .alerta-tela p {
+    font-size: 1.5em;
+  }
+  .alerta-tela i {
+    font-size: 3em;
+  }
+  .alerta-tela .icone-celular {
+    font-size: 3.5em;
+  }
+}
+
+@media (min-width: 768px) {
+  .hidden-md-up {
+    display: none!important;
+  }
+}
+
+@media (min-width: 992px) {
+  .sidebar-mini.sidebar-collapse .main-sidebar:hover {
+    width: var(--tamanhoSidebar);
+  }
+}
+
+
+
+body {
+  font-family: 'Open Sans Condensed', sans-serif !important;
+}
+
+.radioGroupButtons {
+  position: relative;
+  bottom: 15px;
+}
+
+.btn-group .btn.active {
+  color: white;
+  background-color: var(--corPrincipal);
+}
+
+.coluna-botao .btn-default {
+  background-color: var(--corPrincipal);
+  border-color: var(--corPrincipal);
+  color: white;
+}
+
+.tabBox {
+  box-shadow: 0 0 1px rgb(0 0 0 / 13%), 0 1px 3px rgb(0 0 0 / 20%);
+  border: 1px solid var(--cinza);
+}
+
+.tabBox hr {
+  margin: 0;
+}
+
+.tabBox-header {
+  padding: 15px;
+}
+
+.tabBox-body {
+  border-top: 0;
+  padding: 20px;
+}
+
+.tabBox-header .radioGroupButtons {
+  position: static;
+}
+
+.tabBox-header .btn-group {
+  border-radius: 20px;
+}
+
+.tabBox-header .btn-group>.btn-group:not(:first-child) {
+  margin-left: 15px;
+}
+
+
+.tabBox-header .btn-group .btn.active {
+  background-color: var(--corDestaqueClara);
+  color: black;
+}
+
+.btn-group>.btn-group:not(:last-child)>.btn {
+  border-radius: .25em;
+}
+
+.btn-group>.btn-group:not(:first-child)>.btn {
+  border-radius: .25em;
+}
+
+.colorSpan {
+  display: inline-block; 
+  margin-right: 5px; 
+  border-radius: 10px; 
+  width: 9px; 
+  height: 9px;
+}
+
+.shiny-output-error {
+  top: 50px !important;
+}
+
+.slider-animate-container {
+  margin-top: 20px;
+  margin-left: 15px;
+}
+
+.play i, .pause i {
+  color: var(--corPrincipal);
+}
+
+/*********************
+  Navbar
+*********************/
+
+.navbar {
+  padding: 2rem .5rem .5rem .5rem;
+  z-index: 0;
+}
+
+.navbar-light {
+  background-color: white;
+}
+
+.navbar-light h2 {
+  color: var(--preto);
+  font-weight: bold;
+  font-size: 1.9em;
+  margin: 0;
+}
+
+/*********************
+  Sidebar
+*********************/
+
+aside {
+  margin-top: var(--marginTop);
+}
+
+aside p {
+  font-size: 0.9em;
+}
+
+.sidebar-light-primary .sidebar a {
+  color: var(--preto);
+}
+
+.sidebar-light-primary .nav-sidebar>.nav-item>.nav-link.active {
+  color: var(--corPrincipal);
+  font-weight: bold;
+}
+
+.sidebar-light-primary .nav-sidebar > .nav-item > .nav-link.active {
+  background-color: var(--corPrincipal);
+  color: white;
+  font-weight: bold;
+}
+
+.sidebar-light-primary .nav-sidebar > .nav-item.menu-open > .nav-link {
+  background-color: var(--corPrincipal);
+  color: white;
+}
+
+.sidebar-light-primary .nav-treeview > .nav-item > .nav-link.active {
+  color: var(--corPrincipal);
+  font-weight: bold;
+}
+
+.sidebar-light-primary .nav-treeview>.nav-item>.nav-link.active, .sidebar-light-primary .nav-treeview>.nav-item>.nav-link.active:hover {
+  color: var(--corPrincipal);
+}
+
+.nav-pills .nav-link:not(.active):hover {
+    color: var(--corPrincipal);
+}
+
+.main-sidebar {
+  width: var(--tamanhoSidebar);
+}
+
+.sidebar-collapse .main-sidebar {
+  margin-left: var(--marginSidebar);
+}
+
+@media (min-width: 576px) {
+  .content-wrapper, .main-footer, .main-header {
+    margin-left: var(--tamanhoSidebar);
+  }
+}
+
+/*********************
+  body
+*********************/
+
+.descricao {
+  text-align: justify;
+}
+
+.form-group, .selectize-control {
+  margin-bottom: -5px;
+}
+
+.coluna-botao .btn {
+  font-size: 0.9em;
+}
+
+.hr-gradiente {
+  border: 0;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(to right, white, grey, white);
+  margin: 25px 0 25px 0;
+}
+
+
+.content-wrapper {
+  background-color: white;
+  margin-bottom: 40px;
+}
+
+@media (max-width: 991px) {
+  .content-wrapper {
+    padding: 0 5%;
+  }
+}
+
+.container-fluid {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.bread-pitt {
+  font-size: 0.8em;
+}
+
+.titulo-pagina {
+  color: var(--corPrincipal);
+  margin: 20px 0;
+  font-weight: bold;
+}
+
+#titulo h5 {
+  font-size: 1rem;
+}
+
+.section{
+  margin-top: 20px;
+}
+
+@media only screen and (min-width: 1000px) {
+  .content {
+    margin-left: 50px;
+    margin-right: 30px;
+  }
+}
+
+/*********************
+  filtros
+*********************/
+
+.btn-primary, .btn-primary:hover, 
+.btn-primary:not(:disabled):not(.disabled):active,
+.show>.btn-primary.dropdown-toggle:focus,
+.show>.btn-primary.dropdown-toggle {
+  background-color: var(--corPrincipal);
+  border-color: var(--corPrincipal);
+}
+
+.btn-warning, .btn-warning:hover, 
+.btn-warning:not(:disabled):not(.disabled):active,
+.show>.btn-warning.dropdown-toggle:focus,
+.show>.btn-warning.dropdown-toggle {
+  background-color: var(--corDestaque);
+  border-color: var(--corDestaque);
+  color: white;
+}
+
+.sw-dropdown .glyphicon-triangle-bottom::before {
+  content: unset;
+}
+
+.filtros .btn-primary {
+  width: 100%;
+}
+
+.filtros-dropdown i {
+  font-size: 2em;
+  color: var(--corPrincipal);
+}
+
+.filtros-dropdown {
+  font-size: 0.9em;
+}
+
+.filtros-dropdown p {
+  text-align: center;
+}
+
+.filtros {
+  position: relative;
+}
+
+@media all (min-width: 576px){
+  .filtros .btn-group-container-sw {
+    width: 95%;
+  }
+}
+
+.filtros .btn-group .btn-group-toggle {
+  width: 100%;
+}
+
+.dd-filtros .sw-dropdown, .disclaimer .sw-dropdown {
+  position: static;
+}
+
+.dd-filtros .sw-dropdown-content {
+  max-width: 600px;
+  margin-left: max(-45%, -300px);
+  left: 50%;
+}
+
+.disclaimer .sw-dropdown-content {
+  margin-left: -45%;
+  left: 50%;
+  overflow: hidden;
+}
+
+
+/*.indicadores .sw-dropdown-content {
+  max-width: 400px;
+  margin-left: -200px;
+  left: 50%;
+  overflow: hidden;
+}*/
+
+@media (min-width: 576px) {
+  .divisoria-tab-filtros {
+    border-left: 1px solid var(--cinza);
+  }
+}
+
+.dropdown-toggle::after {
+  content: unset;
+}
+
+.irs-bar-edge {
+  border: 1px solid var(--corPrincipal);
+  background: var(--corPrincipal);
+}
+
+.irs-bar {
+  border-top: var(--corPrincipal);
+  background: var(--corPrincipal);
+  border-bottom: var(--corPrincipal);
+}
+
+.irs-from, .irs-to, .irs-single {
+  padding: 1px 4px;
+  background: var(--corPrincipal);
+}
+
+.slider .form-group > .irs {
+  width: 100%;
+}
+
+.slider label.control-label, .slider .form-group > .irs  { 
+   display: table-cell; 
+   text-align: center; 
+   vertical-align: middle; 
+} 
+
+label.control-label {
+  padding-right: 20px;
+}
+
+.slider .form-group { 
+  display: table-row;
+}
+
+
+/*********************
+  tabela
+*********************/
+
+.tabela {
+  font-size: 0.8em;
+}
+
+.titulo-tabela {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.tabela .rt-td button {
+  background-color: var(--corDestaqueClara);
+}
+
+/*********************
+  infobox
+*********************/
+
+.info-box-number {
+  font-size: 2em;
+}
+
+.info-box-number-unit {
+  font-size: 0.7em;
+}
+
+/*********************
+  modal
+*********************/
+
+.modal-title {
+  font-size: 1.1rem;
+}
+
+.modal-footer .btn-default {
+  background-color: var(--corPrincipal);
+  border-color: var(--corPrincipal);
+  color: white;
+}
+
+.detalhe-projetos .card-header {
+  background-color: var(--corDestaqueClara);
+}
+
+.detalhe-projetos .card {
+    box-shadow: 0 0 1px var(--corDestaqueClara),
+    0 1px 3px var(--corDestaqueClara);
+}
+
+.detalhe-projetos .btn-tool {
+  color: black;
+}
+
+.detalhe-projetos .btn-tool:hover {
+  color: white;
+}
+
+
+/*********************
+  disclaimer
+*********************/
+
+.disclaimer  ul > li {
+  margin: 25px !important;
+  font-size: 0.9em;
+}
+
+.disclaimer ol > li {
+  margin-bottom: 10px;
+}
+
+/*********************
+  footer
+*********************/
+
+
+footer a {
+  color: black;
+  font-size: 16px;
+}
+
+footer span {
+  visibility: hidden;
+  opacity: 0;
+  font-size: 16px;
+}
+
+footer:hover a:hover span {
+  font-size: 0.9em;
+  color: ;
+  visibility: visible;
+  opacity: 1;
+  transition: visibility 0s linear 0s, opacity 1s;
+}
+
+footer:hover a {
+  color: black;
+}
+
+footer:hover a:hover {
+  color: black;
+}
+
+
+

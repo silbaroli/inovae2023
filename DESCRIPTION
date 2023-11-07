@@ -1,0 +1,44 @@
+Package: cgeePanorama
+Title: Panorama dos Investimentos em PD&D em Energia no Brasil
+Version: 0.0.0.9000
+Authors@R: 
+    person(given = "firstname",
+           family = "lastname",
+           role = c("aut", "cre"),
+           email = "your@email.com")
+Description: Ferramenta digital Panorama dos Investimentos em PD&D em Energia no Brasil, no âmbito do projeto Energy Innovation Platform (EIP) do CGEE, em cooperação com a Empresa de Pesquisa Energética EPE-MME.
+License: MIT + file LICENSE
+Imports: 
+    config (>= 0.3),
+    golem (>= 0.3.0),
+    shiny (>= 1.5.0),
+    magrittr,
+    pkgload,
+    RSQLite,
+    bs4Dash,
+    dplyr,
+    highcharter,
+    purrr,
+    scales,
+    shinyWidgets,
+    dbplyr,
+    reactable,
+    lubridate,
+    stringr,
+    tidyr,
+    forcats,
+    glue,
+    tippy,
+    echarts4r,
+    htmltools,
+    htmlwidgets,
+    tibble,
+    readxl,
+    santoku
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.1.1
+URL: https://github.com/curso-r/cgeePanorama
+BugReports: https://github.com/curso-r/cgeePanorama/issues
+Depends: 
+    R (>= 2.10)
